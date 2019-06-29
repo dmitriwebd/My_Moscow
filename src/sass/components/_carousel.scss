@@ -1,0 +1,78 @@
+.carousel {
+
+    &__block {
+        max-width: 1040px;
+        margin: 0 auto;
+        position: relative;
+
+    }
+
+    &__q {
+        font-size: 13px;
+        font-family: "Myriad Pro";
+        color: $color-text-grey-2;
+        font-style: italic;
+        line-height: 1.769;
+        text-align: left;
+        padding: 27px 20px 15px 24px;
+        background-color: $color-bg-grey;
+        margin-bottom: 9px;
+        max-width: 510px;
+        max-height: 200px;
+
+        @media only screen and (max-width: 768px) {
+            max-width: 100%;
+        }
+    }
+
+    
+    &__author {
+        max-height: 43px;
+        display: flex;
+    }
+
+    &__photo {
+        height: 43px;
+    }
+    
+    &__name {
+        font-size: 13px;
+        font-family: "Myriad Pro";
+        color: $color-author-name;
+        line-height: 43px;
+        text-align: left;
+        margin-left: 8px;
+    } 
+
+    .slick-prev {
+        border: none;
+        background-color: #fff;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -48px;
+        cursor: pointer;
+        outline: none;
+        svg {
+            width: 41px;
+            height: 41px;
+            fill: $color-yellow;
+        }
+    }
+
+    .slick-next {
+        border: none;
+        background-color: #fff;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -40px;
+        cursor: pointer;
+        outline: none;
+        svg {
+            width: 41px;
+            height: 41px;
+            fill: $color-yellow;
+        }
+    }
+}

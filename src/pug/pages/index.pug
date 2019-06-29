@@ -1,0 +1,184 @@
+//- подключаем шаблон 
+extends ../includes/template.pug
+
+//- добавляем в блок links ссылку на шрифт до подключения основных стилей
+prepend links
+    link(href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap&subset=cyrillic" rel="stylesheet")
+
+//- изменяем содержание блока title для текущей страницы
+block title
+    | MyMoscow
+
+//- добавляем в блок scripts ссылки на файлы, необходимые для работы слайдера, до подключения основного файла со скриптами
+prepend scripts
+    script(type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js")
+    script(type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js")
+    script(type="text/javascript" src="js/slick.min.js")
+
+//- наполняем содержимое блока
+block center-text
+    p(class="header__big") Необычная Москва
+    h1(class="header__title") MyMoscow - агентсво итересных маршрутов
+    a(href="#aboutUs" class="header__btn button-blue link") подробнее о нас
+
+//- наполняем содержимое блока
+block content
+    section(class="services" id="services")
+        .services__wrapper.wrapper
+            .services__title
+                h2 Что мы предлагаем?
+                p Наша главная цель - рассказать о Москве так, чтобы это было интересно всем!
+            .services__row
+                .services__block
+                    h3(class="services__subtitle services__subtitle--first") необычные маршруты
+                    p. 
+                        Мы обязательно порадуем тебя необычными маршрутами Москвы, которые 
+                        прокладывают наши опытные гиды. Ты увидишь и узнаешь о Москве то, что никода 
+                        не знал!
+                .services__block
+                    h3(class="services__subtitle services__subtitle--second") класнные сувениры
+                    p. 
+                        Отличная новость! У нас появился магазин сувениров! И самое примечательное, 
+                        что все эти сувениры мы делаем сами! заходи к нам в гости!
+            .services__row
+                .services__block
+                    h3(class="services__subtitle services__subtitle--third") интересные маршруты
+                    p. 
+                        За время экскурсий, которых у нас больше 20, ты узнаешь и увидишь все основные 
+                        досопримечательности: Кремль, Храм Христа Спаителя, так и пройдешься по 
+                        пешеходным улицам Москвы, узнаешь их историю и сделаешь самые классные  
+                        фотографии.
+                .services__block
+                    h3(class="services__subtitle services__subtitle--fourth") фотосессии в москве
+                    p. 
+                        Команда MyMoscow рада провести креативные фотосессии в любом уголке 
+                        Москвы. Не важно, свадьба у Вас или просто захотелось добавить в альбом или 
+                        инстаграм красивых фоток. 
+            .services__row
+                .services__block
+                    h3(class="services__subtitle services__subtitle--fifth") новые знакомства
+                    p. 
+                        MyMoscow - это целый клуб, где после московских проулок ты сможешь 
+                        продолжить общение с теми, кому интересна Москва , знакомиться с новыми 
+                        людьми и делиться впечатлениями.
+                .services__block
+                    h3(class="services__subtitle services__subtitle--sixth") яркие впечатления
+                    p. 
+                        Самое важное - это яркие эмоции, которые остануться с тобой на долгое время! 
+                        Поэтому в нашей команде мы ждем именно тебя!
+
+    section(class="aboutUs" id="aboutUs")
+        .aboutUs__content
+            .aboutUs__img
+            .aboutUs__article
+                .aboutUs__text
+                    h3 кто мы такие
+                    p Мы - команда тех, кто любит историю и любит Москву
+                    p. 
+                        Москва – это не только место по «заколачиванию денег» и «взращиванию карьеры», 
+                        а еще и бесконечно красивые памятники природы, заказники, парки, заповедники. 
+                        Активный отдых в Москве и Подмосковье – это отличная возможность вырваться из 
+                        душного мегаполиса куда-нибудь в «дебри», навстречу приключениям. К счастью, не 
+                        все Подмосковье еще «облагорожено» асфальтными дорожками и высоченными коттеджными
+                        заборами. Еще встречаются места, настолько глухие и далекие, что, очутившись там, 
+                        кажется, что ты – первый человек, ступивший на эту землю.
+                    p. 
+                        Там, где не проедет автомобилист и даже велосипедист, найдет лазейку и откроет для 
+                        себя все красоты 100% бездорожья турист, проводящий свой активный отдых в Подмосковье.
+                    a(href="page2.html" class="aboutUs__btn button-yellow") подробнее о нас
+
+    section(class="portfolio")
+        .portfolio__wrapper.wrapper
+            .portfolio__title.title
+                h2(class="title__main") москва в фотографиях
+                p(class="title__sub"). 
+                    Проще всего рассказать обо всем в фотографиях. Смотрите наши фотоотчеты и 
+                    присылайте нам свои фотографии.
+        ul(class="portfolio__album portfolio__album--top")
+            li(class="portfolio-item")
+                img(src="../img/photos/1.jpg" alt="img" class="portfolio__img")
+            li(class="portfolio-item")
+                img(src="../img/photos/7.jpg" alt="img" class="portfolio__img")
+            li(class="portfolio-item")
+                img(src="../img/photos/5.jpg" alt="img" class="portfolio__img")
+            li(class="portfolio-item")
+                img(src="../img/photos/3.jpg" alt="img" class="portfolio__img")
+        ul(class="portfolio__album")
+            li(class="portfolio-item")
+                img(src="../img/photos/8.jpg" alt="img" class="portfolio__img")
+            li(class="portfolio-item")
+                img(src="../img/photos/6.jpg" alt="img" class="portfolio__img")
+            li(class="portfolio-item")
+                img(src="../img/photos/4.jpg" alt="img" class="portfolio__img")
+            li(class="portfolio-item")
+                img(src="../img/photos/2.jpg" alt="img" class="portfolio__img")
+
+    section(class="feedback" id="feedback")
+        .feedback__wrapper.wrapper
+            .feedback__title.title
+                h2(class="title__main") отзывы
+            .feedback__carousel.carousel
+                .carousel__block
+                    .carousel__content
+                        blockquote(class="carousel__q").
+                            Были с дочкой и подругой на ночной экскурсии. Все таки как много
+                            зависит от экскурсовода! Мы все четыре часа ходили за Станиславом
+                            Симоновым, как кролики. Боялись пропустить хоть одно слово. При
+                            этом моей дочке - которая побывала во многих местах и с детства
+                            искушенная на интересные события - была сильно увлечена.
+                        .carousel__author
+                            img(class="carousel__photo" src="../img/testimonials/test2.jpg" alt="photo")
+                            span(class="carousel__name") Екатерина Васильева
+                    .carousel__content
+                        blockquote(class="carousel__q").
+                            Ездили на экскурсию с семиклассниками и родителями. Всем очень
+                            понравилось! Экскурсовод Михаил Борисович очень интересно,
+                            необычно и с юмором рассказывал о Москве 16 века. Гибко подстраивал
+                            эксукурсию под интересы и потребности слушателей, ловко
+                            «управлял» подачей автобуса, не давая нам замёрзнуть.) Огромное 
+                        .carousel__author
+                            img(class="carousel__photo" src="../img/testimonials/test1.jpg" alt="photo")
+                            span(class="carousel__name") Анна Крушевская
+                    .carousel__content
+                        blockquote(class="carousel__q").
+                            Были с дочкой и подругой на ночной экскурсии. Все таки как много
+                            зависит от экскурсовода! Мы все четыре часа ходили за Станиславом
+                            Симоновым, как кролики. Боялись пропустить хоть одно слово. При
+                            этом моей дочке - которая побывала во многих местах и с детства
+                            искушенная на интересные события - была сильно увлечена.
+                        .carousel__author
+                            img(class="carousel__photo" src="../img/testimonials/test3.jpg" alt="photo")
+                            span(class="carousel__name") Олег Яковлев
+                    .carousel__content
+                        blockquote(class="carousel__q").
+                            Ездили на экскурсию с семиклассниками и родителями. Всем очень
+                            понравилось! Экскурсовод Михаил Борисович очень интересно,
+                            необычно и с юмором рассказывал о Москве 16 века. Гибко подстраивал
+                            эксукурсию под интересы и потребности слушателей, ловко
+                            «управлял» подачей автобуса, не давая нам замёрзнуть.) Огромное 
+                        .carousel__author
+                            img(class="carousel__photo" src="../img/testimonials/test4.jpg" alt="photo")
+                            span(class="carousel__name") Сергей Данилов
+                    .carousel__content
+                        blockquote(class="carousel__q").
+                            Были с дочкой и подругой на ночной экскурсии. Все таки как много
+                            зависит от экскурсовода! Мы все четыре часа ходили за Станиславом
+                            Симоновым, как кролики. Боялись пропустить хоть одно слово. При
+                            этом моей дочке - которая побывала во многих местах и с детства
+                            искушенная на интересные события - была сильно увлечена.
+                        .carousel__author
+                            img(class="carousel__photo" src="../img/testimonials/test5.jpg" alt="photo")
+                            span(class="carousel__name") Вячеслав Ионов
+                    .carousel__content
+                        blockquote(class="carousel__q").
+                            Ездили на экскурсию с семиклассниками и родителями. Всем очень
+                            понравилось! Экскурсовод Михаил Борисович очень интересно,
+                            необычно и с юмором рассказывал о Москве 16 века. Гибко подстраивал
+                            эксукурсию под интересы и потребности слушателей, ловко
+                            «управлял» подачей автобуса, не давая нам замёрзнуть.) Огромное 
+                        .carousel__author
+                            img(class="carousel__photo" src="../img/testimonials/test6.jpg" alt="photo")
+                            span(class="carousel__name") Ольга Боголепова
+    a(href="#up" class="arrowUp link")
+        svg: use(xlink:href="img/icons/sprite.svg#icon-circle-up")
+                

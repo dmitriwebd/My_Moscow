@@ -1,0 +1,136 @@
+.footer {
+    background-color: $color-blue-ocean;
+
+    &__wrapper {
+        padding-top: 62px;
+        padding-bottom: 46px;
+     
+
+        @media only screen and (max-width: 768px) {
+            padding-top: 30px;
+            padding-bottom: 23px;
+        }
+    }
+  
+    &__menu {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        @media only screen and (max-width: 768px) {
+            justify-content: space-around;
+        }
+    }
+
+    &__item {
+        width: 33.3333%;
+        flex-basis: 250px;
+        margin-bottom: 15px;
+
+        h4 {
+            font-size: 22px;
+            font-family: "Myriad Pro";
+            color: $color-white;
+            text-align: left;
+            margin-bottom: 29px;
+            font-weight: 400;
+
+            @media only screen and (max-width: 768px) {
+                margin-bottom: 15px;
+            }
+        }
+
+    }
+
+    &__logos {
+        margin-bottom: 20px;
+    }
+
+    &__logo {
+        background: url('../img/icons/spasskaya-tower.png') center center/ contain no-repeat;
+        padding: 16px;
+        margin-right: 11px;
+        margin-left: 5px;
+    }
+        
+    &__logotext {
+        font-size: 21px;
+        font-family: "MV Boli";
+        color: $color-yellow;
+        line-height: 37px;
+        text-align: right;
+    }
+
+
+    &__text {
+        max-width: 260px;
+        font-size: 14px;
+        font-family: "Myriad Pro";
+        color: $color-text-grey-3;
+        line-height: 1.429;
+        text-align: left;
+    }
+
+    .contacts-block {
+        list-style: none;
+
+        li {
+            font-size: 13.5px;
+            font-family: "Myriad Pro";
+            color: $color-white;
+            line-height: 30px;
+            text-align: left;
+            margin-left: 25px;
+            position: relative;
+
+            a {
+                color: $color-white;
+                line-height: 30px; 
+                text-decoration: none; 
+            }
+
+            &::before {
+                content: "";
+                width: 20px;
+                height: 21px;
+                position: absolute;
+                left: -25px;
+            }
+        }
+    
+        &__adress::before {
+            background: url('../img/icons/placeholder.png') center center / contain no-repeat;
+        }
+
+        &__email::before {
+            background: url('../img/icons/mail.png') center center / contain no-repeat;
+        }
+
+        &__phone::before {
+            background: url('../img/icons/telephone.png') center center / contain no-repeat;
+        }
+    } 
+
+    &__news {
+
+        p {
+            max-width: 226px;
+            font-size: 13.5px;
+            font-family: "Myriad Pro";
+            color: $color-text-grey;
+            line-height: 1.481;
+            text-align: left;
+            margin-bottom: 5px;  
+            margin-top: 15px;   
+        }
+
+        date {
+            font-size: 13.5px;
+            font-family: "Myriad Pro";
+            color: $color-date;
+            line-height: 1.481;
+            text-align: left;
+            margin-bottom: 15px;
+        }
+    }
+}

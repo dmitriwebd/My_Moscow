@@ -1,0 +1,41 @@
+.footerBottom {
+    background-color: $color-blue-deep-2;
+
+    &__wrapper {
+        padding-top: 35px;
+        padding-bottom: 35px;
+
+        @media only screen and (max-width: 768px) {
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+    }
+
+    &__content {
+        min-height: 90px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media only screen and (max-width: 768px) {
+           flex-direction: column;
+        }
+    }
+
+    &__item {
+
+        &--info {
+            font-size: 13.5px;
+            font-family: "Myriad Pro";
+            color: $color-text-grey;
+
+            &:nth-child(2) {
+                margin-left: -170px;
+
+                @media only screen and (max-width: 768px) {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}

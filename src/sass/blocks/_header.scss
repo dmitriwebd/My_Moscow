@@ -1,0 +1,58 @@
+.header {
+    padding-top: 21px;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/background/top2.jpg') center/ cover no-repeat;
+    min-height: 560px;
+
+    @media only screen and (max-width: 768px) {
+        min-height: 460px;
+    }
+
+    //блок с заголовком h1 и кнопкой
+    &__center {
+        margin-top: 151px;
+        text-align: center; 
+
+        h2 {
+            font-size: 36px;
+            font-weight: 700;
+            text-align: center;
+            color: $color-white;
+        }
+
+        @media only screen and (max-width: 768px) {
+            margin-top: 75px;
+        }
+    }
+
+    &__big {
+        text-align: center;
+        color: $color-white;
+        font-weight: 700;
+        font-size: 59px;
+
+        @media only screen and (max-width: 768px) {
+            font-size: 40px;
+        }
+    }
+
+    &__title {
+        text-align: center;
+        color: $color-white;
+        line-height: .8;
+        font-weight: 400;
+        font-size: 28px;
+
+        @media only screen and (max-width: 768px) {
+            font-size: 16px;
+        }
+    }
+
+    //кнопка
+    &__btn {
+        margin-top: 91px;
+
+        @media only screen and (max-width: 768px) {
+            margin-top: 45px;
+        }
+    }
+}

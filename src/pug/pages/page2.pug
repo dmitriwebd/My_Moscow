@@ -1,0 +1,88 @@
+//- подключаем шаблон 
+extends ../includes/template.pug
+
+prepend links
+    link(href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap&subset=cyrillic" rel="stylesheet")
+
+//- изменяем содержание блока title для текущей страницы
+block title
+    | Контакты
+
+//- наполняем содержимое блока
+block center-text
+    h1(class="header__big") MyMoscow
+    p(class="header__title") агентсво итересных маршрутов
+    h2 -Контакты-
+
+//- наполняем содержимое блока
+block content
+    section(class="contacts")
+        .contacts__wrapper-2.wrapper-2
+                h2.contacts__title контакты
+                .contacts__description
+                    p. 
+                        Мы - команда тех, кто любит историю и любит Москву.
+                    p. 
+                        Москва – это не только место по «заколачиванию денег» и «взращиванию карьеры»,
+                        а еще и бесконечно красивые памятники природы, заказники, парки, заповедники. 
+                        Активный отдых в Москве и Подмосковье – это отличная возможность вырваться из 
+                        душного мегаполиса куда-нибудь в «дебри», навстречу приключениям. К счастью, 
+                        не все Подмосковье еще «облагорожено» асфальтными дорожками и высоченными 
+                        коттеджными заборами. Еще встречаются места, настолько глухие и далекие, что, 
+                        очутившись там, кажется, что ты – первый человек, ступивший на эту землю.
+                    p. 
+                        Там, где не проедет автомобилист и даже велосипедист, найдет лазейку и откроет 
+                        для себя все красоты 100% бездорожья турист, проводящий свой активный отдых 
+                        в Подмосковье.
+
+                ul(class="contacts__persons")
+                    li(class="contacts__person")
+                        .contacts__img
+                            img(src="../img/testimonials/man.jpg" alt="seo__photo" class="contacts__photo")
+                        .contacts__contact
+                            .contacts__info
+                                span(class="contacts__name") Александр Рыбаков
+                                span(class="contacts__position") директор
+                                span(class="contacts__link") По всем вопросам пишите на почту: 
+                                a(href="mailto:rybakov@mymoscow.ru" class="contacts__email") rybakov@mymoscow.ru
+                    li(class="contacts__person")
+                        .contacts__img
+                            img(src="../img/testimonials/woman.jpg" alt="gid__photo" class="contacts__photo")
+                        .contacts__contact
+                            .contacts__info
+                                span(class="contacts__name") Елена Белкина
+                                span(class="contacts__position") руководитель корпоративного отдела
+                                span(class="contacts__link") По вопросам корпоративных экскурсий: 
+                                a(href="mailto:rybakov@mymoscow.ru" class="contacts__email") belkina@mymoscow.ru
+
+                .contacts__container
+                    .contacts__connection
+                        ul(class="contacts__list")
+                            li(class="contacts__item")
+                                span()
+                                    | Москва,
+                                    br
+                                    | Большая Спасская 12
+                            li(class="contacts__item")
+                                span Email: 
+                                a(href="mailto:moscow@imoscow.ru" class="contacts__mail") moscow@imoscow.ru
+                            li(class="contacts__item")
+                                span Телефон:
+                                a(href="tel:+74956264600" class="contacts__phone-number") 8 (495) 626-46-00
+                    .contacts__form.form
+                        h3(class="form__title") Напишите нам
+                        form(action="#")
+                            .form__input
+                                label(for="form-name") ФИО
+                                input(id="form-name" type="text" name="name" placeholder="ФИО")
+                            .form__input
+                                label(for="form-email") Email
+                                input(id="form-email" type="email" name="email" placeholder="Email")
+                            .form__input
+                                label(for="form-message") Message
+                                textarea(name="message" id="form-message" placeholder="Ваше сообщение")
+                            button(class="form__button") Отправить
+                            
+        .contacts__map
+            script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ac9ca259d1d3b73573b73daf2cfe45893f895eeb4885021b0295cf910562f9f9f&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=false")
+            

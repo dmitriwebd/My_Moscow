@@ -1,0 +1,63 @@
+.form {
+    width: 100%;
+
+    label {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+        white-space: nowrap;
+        clip-path: inset(100%);
+        clip: rect(0,0,0,0);
+        overflow: hidden;
+    }
+
+    &__input {
+        
+        input, textarea {
+            width: 100%;
+            border: 3px solid $color-yellow-dark;
+            background-color: $color-white;
+            display: block;
+            resize: none;
+            padding: 8px 10px 8px 15px;
+            border-radius: 3px;
+
+            color: $color-input-text;
+            font-size: 27px;
+            line-height: 20px;
+            font-family: inherit;
+            margin-top: 16px;
+        }
+
+        textarea {
+            min-height: 168px;
+        }
+    }
+
+    &__button {
+        padding: 18px 0;
+        width: 100%;
+        background-color: $color-blue-deep;
+        border: none;
+        box-shadow: none;
+        cursor: pointer;
+        margin-top: 16px;
+
+        font-family: inherit;
+        color: $color-white;
+        font-size: 27px;
+        line-height: 20px;
+
+        transition: all .2s;
+
+        &:hover,
+        &:active {
+            background-color: $color-blue-ocean;
+        }
+
+    }
+    
+}

@@ -1,0 +1,30 @@
+//- разметка шаблона
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        //- блок для подключения стилей
+        block links 
+            link(rel="stylesheet", href="css/style.css")
+            link(rel="shortcut icon", type="image/ico", href="img/icons/favicon.ico")
+        //- блок для изменения title
+        title
+            block title
+    body
+        header(class="header" id="up")
+            .header__wrapper.wrapper
+                //- подключаем файл с навигацией
+                include _header-nav.pug
+                .header__center
+                    //- блок для изменения текста по центру
+                    block center-text
+        main 
+            //- блок для добавления основного контента
+            block content
+        //- подключаем файл с футером
+        include _footer.pug
+        //- блок для добавления скриптов
+        block scripts
+            script(src="js/script.js")

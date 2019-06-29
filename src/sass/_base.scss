@@ -1,0 +1,33 @@
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+.wrapper {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.wrapper-2 {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 10px;
+
+    @media only screen and (max-width: 768px) {
+        max-width: 1140px;
+    }
+}
+

@@ -1,0 +1,24 @@
+.social {
+
+    &__item {
+        list-style: none;
+        display: inline-block;
+    }
+
+    &__link {
+        padding: 16px;
+        margin-left: 7px;
+
+        &--vk {
+            background: url('../img/social/vk.png') center center/ contain no-repeat;
+        }
+
+        &--fb {
+            background: url('../img/social/facebook.png') center center / contain no-repeat;
+        }
+        
+        &--inst {
+            background: url('../img/social/instagram.png') center center / contain no-repeat;
+        }
+    }
+}

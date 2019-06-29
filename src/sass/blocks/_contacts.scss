@@ -1,0 +1,252 @@
+.contacts {
+
+    &__wrapper-2 {
+        padding-top: 70px;
+        padding-bottom: 65px;
+
+        @media only screen and (max-width: 768px) {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+    }
+
+    &__title {
+        font-size: 26px;
+        font-weight: 700;
+        color: $color-blue;
+        text-transform: uppercase;
+        line-height: 22px;
+        text-align: center;
+        letter-spacing: -0.65px;
+    }
+
+    // блок с текстом
+    &__description {
+        margin-top: 54px;
+        color: $color-blue-deep;
+        font-size: 18px;
+        line-height: 24px;
+        text-align: left;
+
+        & > *:not(:first-child) {
+            margin-top: 36px;
+
+            @media only screen and (max-width: 768px) {
+                margin-top: 18px;
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            margin-top: 25px;
+        }
+    }
+
+    // блок с карточками менеджеров
+    &__persons {
+        margin-top: 70px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        @media only screen and (max-width: 768px) {
+            margin-top: 35px;
+        }
+
+        @media only screen and (max-width: 645px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    
+     // карточка менеджера
+    &__person {
+        display: flex;
+    
+        @media only screen and (max-width: 1270px) {
+            
+            &:last-child {
+                margin-top: 20px;
+            }
+    
+        }
+
+        @media only screen and (max-width: 645px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+     // блок с фото менеджера
+    &__img {
+        width: 261px;
+        height: 190px;
+        border-right: 8px solid $color-blue;
+
+        @media only screen and (max-width: 645px) {
+            border-right: none;
+            border-bottom: 8px solid $color-blue;
+        }
+    }
+    
+     // фото менеджера
+    &__photo {
+       height: 100%;
+       width: 100%;
+    }
+    
+    // вторая половина блока person
+    &__contact {
+        width: 365px;
+        min-height: 190px;
+        background-color: $color-yellow-dark;
+        padding: 22px 5px 10px 30px;
+
+        @media only screen and (max-width: 645px) {
+            padding: 5px 5px 5px 5px;
+            width: 261px;
+        }
+    }
+    
+    // блок с контактами менеджера
+    &__info {
+        & > * {
+            display: block;
+            letter-spacing: -0.65px;
+        }
+    }
+    
+    // имя менеджера
+    &__name {
+        color: $color-blue-deep;
+        font-size: 24px;
+        font-weight: 700;
+    }
+    
+     // должность и email менеджера
+    &__position,
+    &__link,
+    &__email {
+        color: $color-blue-deep;
+        font-size: 18px;
+    }
+     // должность менеджера
+    &__position {
+        margin-top: 11px;
+    }    
+     
+    &__link {
+        margin-top: 39px;
+    }
+     // email менеджера
+    &__email {
+        color: $color-link;
+        text-decoration: none;
+    }
+    // контейнер для блоков со списком и формой
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-top: 66px;
+
+        @media only screen and (max-width: 768px) {
+           padding-top: 30px;
+        }
+
+        @media only screen and (max-width: 645px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    // список контактов
+    &__list {
+        list-style: none;
+        min-height: 213px;
+        max-width: 200px;
+        margin-left: 86px;
+    }
+    
+    &__item {
+        position: relative;
+    
+        & > * {
+            display: block;
+            color: $color-blue-deep;
+            font-size: 22px;
+        }
+    
+        
+        a {
+            text-decoration: none;
+            transition: all .2s;
+    
+            &:hover,
+            &:active {
+                color: $color-link;
+            }
+        }
+    
+        &:nth-child(1) {
+            &::before {
+                content: "";
+                width: 86px;
+                height: 100%;
+                position: absolute;
+                top: -5px;
+                left: -86px;
+                background: url('../img/icons/placeholder.png') center center / contain no-repeat;
+            }
+        }
+    
+        &:nth-child(2) {
+            margin-top: 41px;
+    
+            &::before {
+                content: "";
+                width: 86px;
+                height: 100%;
+                position: absolute;
+                top: -5px;
+                left: -86px;
+                background: url('../img/icons/mail.png') center center / contain no-repeat;
+            }
+        }
+    
+        &:nth-child(3) {
+            margin-top: 27px;
+    
+            &::before {
+                content: "";
+                width: 86px;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: -86px;
+                background: url('../img/icons/telephone.png') center center / contain no-repeat;
+            }
+        }
+    }
+    
+    &__form {
+        flex-basis: 626px;
+
+        @media only screen and (max-width: 938px) {
+            margin-top: 20px;
+            max-height: 450px;
+        }
+    }
+
+    &__title {
+        color: $color-blue-deep;
+        font-size: 22px;
+        margin-bottom: 19px;
+    }
+
+    &__map {
+        border-top: 5px solid $color-yellow-dark;
+        max-height: 570px;
+    }
+
+}
+
+

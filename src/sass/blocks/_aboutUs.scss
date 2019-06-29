@@ -1,0 +1,72 @@
+.aboutUs {
+
+    &__content {
+        min-height: 625px;
+        display: flex;
+
+        @media only screen and (max-width: 768px) {
+            min-height: 425px;
+        }
+    }
+
+    &__img {
+        width: 50%;
+        background: url('../img/photos/group2.jpg') center center/ cover no-repeat; 
+
+        @media only screen and (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    &__article {
+        background-color: $color-yellow-dark;
+        width: 50%;
+
+        @media only screen and (max-width: 768px) {
+            width: 100%;
+        }
+    }
+
+    &__text {
+        padding-top: 95px;
+        padding-left: 80px;
+        padding-bottom: 84px;
+        padding-right: 5px;
+        max-width: 570px;
+        min-height: 450px;
+
+        @media only screen and (max-width: 768px) {
+            padding-top: 45px;
+            padding-bottom: 40px;
+            max-width: 750px;
+        }
+
+        @media only screen and (max-width: 480px) {
+            padding-left: 40px;
+        }
+
+        h3 {
+            font-size: 26px;
+            font-weight: 700;
+            color: $color-white;
+            text-transform: uppercase;
+        }
+    
+        p {
+            margin-top: 38px;
+            font-size: 13px;
+            font-family: "Myriad Pro";
+            color: $color-white;
+            line-height: 24px;
+
+            @media only screen and (max-width: 768px) {
+                margin-top: 16px;
+            }
+        }
+    }
+
+    &__btn {
+        margin-top: 41px;
+        display: inline-block;
+    }
+}
