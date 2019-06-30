@@ -15,6 +15,11 @@ link.on('click', function(e){
     }, 1500);
 });
 
+// появление и исчезновение меню по клику
+$('.navigation__burger').on('click', function(){
+    $('.navigation__list').slideToggle(200);
+});
+
 
 // появление и исчезновение arrowUp
     $(window).scroll(function(){
